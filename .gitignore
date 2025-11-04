@@ -36,6 +36,8 @@
 *.x86_64
 *.hex
 
+signal_handler
+
 # Debug files
 *.dSYM/
 *.su

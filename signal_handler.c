@@ -4,11 +4,11 @@
  */
 
 /**
- * Modified by:
+ * Modified by: Drew Malone
  * 
  * Brief summary of modifications:
+ * Commented out the exit(1) in handle_signal().
  */
-
 
 #include <signal.h>
 #include <unistd.h>
@@ -20,19 +20,16 @@
  */
 void handle_signal() {
     printf("Received a signal\n");
-    exit(1);
+    //exit(1);
 }
 
 int main() {
-
     // Register for the signal
     signal(SIGINT, handle_signal);
-
     // Wait until a signal is received
     while(1) {
         printf("Sleeping\n");
         sleep(1);
     }
-
     return 0;
 }
