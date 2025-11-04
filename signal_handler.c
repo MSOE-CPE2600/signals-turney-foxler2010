@@ -1,6 +1,8 @@
 /**
  * @file signal_handler.c
  * @brief Sets a signal handler for SIGINT, the handler prints a message and then quits
+ * 
+ * Compile with: make signal_handler
  */
 
 /**

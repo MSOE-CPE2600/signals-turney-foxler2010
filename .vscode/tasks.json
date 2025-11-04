@@ -16,6 +16,18 @@
       "problemMatcher": "$gcc"
     },
     {
+      "label": "make debug",
+      "type": "shell",
+      "command": "make debug",
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "clear": true,
+        "focus": true
+      },
+      "problemMatcher": "$gcc"
+    },
+    {
       "label": "make clean",
       "type": "shell",
       "command": "make clean",
@@ -25,6 +37,30 @@
         "close": true
       },
       "problemMatcher": []
+    },
+    {
+      "label": "make signal_handler",
+      "type": "shell",
+      "command": "make signal_handler",
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "clear": true,
+        "focus": true
+      },
+      "problemMatcher": "$gcc"
+    },
+    {
+      "label": "make signal_alarm",
+      "type": "shell",
+      "command": "make signal_alarm",
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "clear": true,
+        "focus": true
+      },
+      "problemMatcher": "$gcc"
     }
   ]
 }
