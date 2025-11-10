@@ -61,6 +61,18 @@
         "focus": true
       },
       "problemMatcher": "$gcc"
+    },
+    {
+      "label": "make signal_segfault",
+      "type": "shell",
+      "command": "make signal_segfault",
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "clear": true,
+        "focus": true
+      },
+      "problemMatcher": "$gcc"
     }
   ]
 }
