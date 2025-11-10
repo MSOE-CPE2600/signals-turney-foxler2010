@@ -85,6 +85,30 @@
         "focus": true
       },
       "problemMatcher": "$gcc"
+    },
+    {
+      "label": "make recv_signal",
+      "type": "shell",
+      "command": "make recv_signal",
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "clear": true,
+        "focus": true
+      },
+      "problemMatcher": "$gcc"
+    },
+    {
+      "label": "make send_signal",
+      "type": "shell",
+      "command": "make send_signal",
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "clear": true,
+        "focus": true
+      },
+      "problemMatcher": "$gcc"
     }
   ]
 }
