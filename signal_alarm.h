@@ -6,4 +6,12 @@
  * Compile with: make signal_alarm
  */
 
-int signal_handler();
+#define _POSIX_C_SOURCE 200809L
+#define ALARM_DURATION 5
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <signal.h>
+
+void signal_handler(int signum);

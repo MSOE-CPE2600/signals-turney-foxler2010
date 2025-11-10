@@ -6,33 +6,25 @@
  * Compile with: make signal_alarm
  */
 
-#define _POSIX_C_SOURCE 200809L
-#define ALARM_DURATION 5
-
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <signal.h>
 #include "signal_alarm.h"
 
 int main(int argc, char *argv[])
 {
-    struct sigaction *act = calloc(1, sizeof(struct sigaction));
-    act->sa_flags = SA_SIGINFO;
-    // TODO sa_handler || sa_sigaction = my signal_handler() function
-    sigaction(SIGALRM, act, NULL);
+    struct sigaction act = {0};
+    act.sa_handler = &signal_handler;
+    sigaction(SIGALRM, &act, NULL);
     alarm(ALARM_DURATION);
     int i = 0;
     while(1) {
         sleep(1);
         i++;
-        printf("Waited for %ds...", i);
+        printf("Waited for %ds...\n", i);
     }
     return EXIT_FAILURE;
 }
 
-int signal_handler()
+void signal_handler(int signum)
 {
-    printf("Alarm signal received!");
+    printf("Alarm signal received!\n");
     exit(EXIT_SUCCESS);
 }
