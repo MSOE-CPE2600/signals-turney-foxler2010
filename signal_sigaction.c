@@ -12,8 +12,8 @@
 int main(int argc, char *argv[])
 {
     struct sigaction act = {0};
-    act.sa_handler = sigusr1_handler;
-    // TODO sa_flags
+    act.sa_flags = SA_SIGINFO;
+    act.sa_sigaction = sigusr1_handler;
     sigaction(SIGUSR1, &act, NULL);
 
     while (1) {
@@ -26,9 +26,8 @@ int main(int argc, char *argv[])
     return EXIT_FAILURE;
 }
 
-void sigusr1_handler(int signum)
+void sigusr1_handler(int sig, siginfo_t *info, void *ucontext)
 {
-    printf("SIGUSR1 recieved!\n");
+    printf("SIGUSR1 recieved from PID %d.\n", info->si_pid);
     exit(EXIT_SUCCESS);
-    // TODO print PID of signal's sender
 }

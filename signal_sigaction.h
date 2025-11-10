@@ -12,4 +12,4 @@
 #include <stdio.h>
 #include <signal.h>
 
-void sigusr1_handler(int signum);
+void sigusr1_handler(int sig, siginfo_t *info, void *ucontext);

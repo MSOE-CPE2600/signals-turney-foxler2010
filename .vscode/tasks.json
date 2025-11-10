@@ -73,6 +73,18 @@
         "focus": true
       },
       "problemMatcher": "$gcc"
+    },
+    {
+      "label": "make signal_sigaction",
+      "type": "shell",
+      "command": "make signal_sigaction",
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "clear": true,
+        "focus": true
+      },
+      "problemMatcher": "$gcc"
     }
   ]
 }
